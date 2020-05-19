@@ -1,0 +1,5 @@
+<library path="lib/libExampleManager">
+  <class name="example_manager/ExampleManager" type="example_manager::ExampleManager" base_class_type="nodelet::Nodelet">
+    <description>ExampleManager nodelet</description>
+  </class>
+</library>
