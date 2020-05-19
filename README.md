@@ -12,6 +12,6 @@ A working example showcasing the [pluginlib](http://wiki.ros.org/pluginlib) feat
 
 ## example_plugins package
 
-* defines a plugin complying with the interface [interface](https://github.com/ctu-mrs/example_ros_pluginlib/blob/github/example_manager/include/example_manager/plugin_interface.h)
+* defines a plugin complying with the [interface](https://github.com/ctu-mrs/example_ros_pluginlib/blob/github/example_manager/include/example_manager/plugin_interface.h)
 * the plugin loads its params and prepares itself for activation
 * it calculates results in its `update()` method and returns them to the manager
