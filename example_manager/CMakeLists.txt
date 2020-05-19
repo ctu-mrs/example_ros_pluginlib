@@ -4,9 +4,6 @@ project(example_manager)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   cmake_modules
-  geometry_msgs
-  std_msgs
-  nav_msgs
   mrs_lib
   nodelet
   )
@@ -16,13 +13,12 @@ find_package(Eigen3 REQUIRED)
 set(Eigen_INCLUDE_DIRS ${EIGEN3_INCLUDE_DIRS})
 set(Eigen_LIBRARIES ${Eigen_LIBRARIES})
 
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fno-diagnostics-color -Wall -Wextra")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fno-diagnostics-color -Wall -Wextra -O0 -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fno-diagnostics-color -Wall -Wextra")
 
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ExampleManager
-  CATKIN_DEPENDS roscpp std_msgs geometry_msgs mrs_lib
+  CATKIN_DEPENDS roscpp mrs_lib
   )
 
 include_directories(

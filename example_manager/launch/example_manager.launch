@@ -1,6 +1,5 @@
 <launch>
 
-  <!-- other args -->
   <arg name="standalone" default="true" />
   <arg name="debug" default="false" />
 
@@ -10,7 +9,7 @@
   <arg     if="$(eval arg('standalone') or arg('debug'))" name="nodelet" value="standalone" />
   <arg unless="$(eval arg('standalone') or arg('debug'))" name="nodelet" value="load" />
   <arg     if="$(eval arg('standalone') or arg('debug'))" name="nodelet_manager" value="" />
-  <arg unless="$(eval arg('standalone') or arg('debug'))" name="nodelet_manager" value="$(arg UAV_NAME)_nodelet_manager" />
+  <arg unless="$(eval arg('standalone') or arg('debug'))" name="nodelet_manager" value="nodelet_manager_name" />
 
     <!-- Example manager -->
   <node pkg="nodelet" type="nodelet" name="ExampleManager" args="$(arg nodelet) example_manager/ExampleManager $(arg nodelet_manager)" output="screen" launch-prefix="$(arg launch_prefix)">
@@ -19,7 +18,7 @@
     <rosparam file="$(find example_manager)/config/plugins.yaml" />
 
       <!-- since plugins are "technically" part of the manager node-->
-      <!-- their param files and remaps and handled here -->
+      <!-- their param files and remaps are handled here -->
 
     <rosparam ns="example_plugin" file="$(find example_plugins)/config/default.yaml" />
 
