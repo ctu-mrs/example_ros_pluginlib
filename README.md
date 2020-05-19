@@ -1,6 +1,6 @@
 # Example ROS Pluginlib
 
-A working example showcasing the [pluginlib](http://wiki.ros.org/pluginlib) feature of ROS.
+A working example showcasing the [pluginlib](http://wiki.ros.org/pluginlib) feature of ROS, simular to what is used between the [ControlManager](https://github.com/ctu-mrs/mrs_uav_managers#controlmanager) and the [trackers](https://github.com/ctu-mrs/mrs_uav_trackers#mrs-uav-trackers-) and [controllers](https://github.com/ctu-mrs/mrs_uav_controllers#mrs-uav-controllers-) within the [uav_core](https://github.com/ctu-mrs/uav_core#the-mrs-uav-system-core-).
 
 ## example_manager package
 
